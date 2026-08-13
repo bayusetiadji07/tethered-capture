@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tethered Capture — Kamera HP via USB</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>📸 Tethered Capture</h1>
+        <p class="subtitle">Kontrol kamera Android dari browser via USB</p>
+      </header>
+
+      <section class="panel" id="connect-panel">
+        <button id="connect-btn" class="btn btn-primary">🔌 Sambungkan HP</button>
+        <span id="connection-status" class="status status-disconnected">Belum tersambung</span>
+      </section>
+
+      <section class="panel" id="folder-panel">
+        <button id="folder-btn" class="btn" disabled>📁 Pilih Folder Tujuan</button>
+        <span id="folder-label" class="folder-label">(belum dipilih)</span>
+      </section>
+
+      <section class="preview-wrap">
+        <img id="preview-img" alt="Preview kamera HP" />
+        <div id="preview-placeholder" class="preview-placeholder">
+          Preview akan muncul di sini setelah HP tersambung.<br />
+          Pastikan aplikasi Kamera bawaan HP sudah dibuka.
+        </div>
+      </section>
+
+      <button id="shutter-btn" class="btn btn-shutter" disabled>📸 AMBIL FOTO</button>
+
+      <div id="counter-label" class="counter-label">Foto berikutnya: —</div>
+
+      <section class="log-panel">
+        <h3>Log</h3>
+        <div id="log-output" class="log-output"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
